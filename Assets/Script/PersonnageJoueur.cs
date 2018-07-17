@@ -3,12 +3,14 @@
 
 public class PersonnageJoueur : MonoBehaviour
 {
-  #region Variables (public)
+    #region Variables (public)
 
+    public Rigidbody m_pRigidBody = null;
 
     public int m_iPv = 20;
 
     public float m_fVitesse = 5.0f;
+    public float m_fVitesseDeSaut = 0.0f;
     
     #endregion
 
@@ -27,6 +29,7 @@ public class PersonnageJoueur : MonoBehaviour
     private void Update()
     {
         MoveCharacter();
+        Jump();
     }
 
     private void MoveCharacter()
@@ -42,11 +45,19 @@ public class PersonnageJoueur : MonoBehaviour
             tDirection.Normalize();
 
             Vector3 tDeplacement = tDirection * (m_fVitesse * Time.deltaTime);
-            transform.position += tDeplacement;
+            m_pRigidBody.MovePosition(transform.position += tDeplacement);
+
 
             transform.forward = tDirection;
         }
      
     }
-
+    private void Jump()
+    {
+        if (Input.GetButtonDown("Jump"))
+        {
+            Vector3 tJump = Vector3.up * m_fVitesseDeSaut;
+            m_pRigidBody.AddForce(tJump, ForceMode.Impulse);
+        }
+    }
 }
