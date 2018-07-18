@@ -74,9 +74,9 @@ public class CameraPersonnage : MonoBehaviour
 			transform.eulerAngles += tRotationX;
 		}
 
-		float fMouseY = Input.GetAxis("Mouse Y");
+		///float fMouseY = Input.GetAxis("Mouse Y");
 
-		Vector3 tRotationY = new Vector3(fMouseY, 0.0f, 0.0f) * (m_fVitesseDeRotation * Time.deltaTime);
+		///Vector3 tRotationY = new Vector3(fMouseY, 0.0f, 0.0f) * (m_fVitesseDeRotation * Time.deltaTime);
 
 		///if (tRotationY != Vector3.zero)
 		///{

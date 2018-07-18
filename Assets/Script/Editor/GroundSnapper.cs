@@ -26,7 +26,7 @@ public class GroundSnapper : MonoBehaviour
 		{
 			Transform pCurrentTransform = pSelection[i];
 
-			RaycastHit[] tHits = Physics.RaycastAll(pCurrentTransform.position + (Vector3.up * 10.0f), Vector3.down, 200.0f, LayerMask.GetMask("Sol"));
+			RaycastHit[] tHits = Physics.RaycastAll(pCurrentTransform.position + Vector3.up, Vector3.down, 10.0f);
 
 			for (int j = 0; j < tHits.Length; ++j)
 			{

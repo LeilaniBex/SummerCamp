@@ -8,6 +8,8 @@ public class PersonnageJoueur : MonoBehaviour
 
 	public Rigidbody m_pRigidBody = null;
 
+	public Arme m_pArme = null;
+
 	public int m_iPv = 20;
 
 	public float m_fVitesse = 5.0f;
@@ -31,6 +33,7 @@ public class PersonnageJoueur : MonoBehaviour
 	{
 		MoveCharacter();
 		Jump();
+		Attaquer();
 	}
 
 	private void MoveCharacter()
@@ -66,6 +69,14 @@ public class PersonnageJoueur : MonoBehaviour
 		{
 			Vector3 tJump = Vector3.up * m_fVitesseDeSaut;
 			m_pRigidBody.AddForce(tJump, ForceMode.Impulse);
+		}
+	}
+
+	private void Attaquer()
+	{
+		if (Input.GetButtonDown("Fire1"))
+		{
+			m_pArme.Attaquer();
 		}
 	}
 }
