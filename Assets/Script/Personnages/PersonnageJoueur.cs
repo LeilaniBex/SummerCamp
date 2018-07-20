@@ -88,7 +88,7 @@ public class PersonnageJoueur : Personnage
 			if (tDirectionDattaque != Vector3.zero)
 				transform.forward = tDirectionDattaque.normalized;
 
-			m_pArme.Attaquer();
+			base.Attaquer();
 
 			
 		}

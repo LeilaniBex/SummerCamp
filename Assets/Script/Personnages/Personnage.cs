@@ -23,5 +23,13 @@ abstract public class Personnage : MonoBehaviour
 	#endregion
 
 	abstract protected void MoveCharacter();
-	abstract protected void Attaquer();
+
+	/// <summary>
+	/// Lance l'attaque de mon arme si elle existe
+	/// </summary>
+
+	virtual protected void Attaquer()
+	{
+		m_pArme?.Attaquer();
+	}
 }

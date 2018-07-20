@@ -185,6 +185,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4886963207971502}
   - component: {fileID: 137555128639187828}
+  - component: {fileID: 114038160409397258}
   m_Layer: 0
   m_Name: Object01
   m_TagString: Untagged
@@ -937,7 +938,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1544003073107660}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: -1.529, y: 0.062, z: 13.7}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4294313518893532}
@@ -1245,6 +1246,20 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &114038160409397258
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1213106255244706}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 85d71fc396060d94e9a45d94d9d36cbc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_pMaitre: {fileID: 114774503908377050}
+  m_fDegats: 0
+  m_fAttaquesParSecondes: 0
 --- !u!114 &114774503908377050
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1256,7 +1271,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: daeaa6294f4aca841a5b9c623f10b083, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_pArme: {fileID: 0}
+  m_pArme: {fileID: 114038160409397258}
   m_pAnimator: {fileID: 95784313456622264}
   m_iPv: 20
   m_fVitesse: 10
