@@ -16,7 +16,7 @@ public class Ennemi : Personnage
 
 	#region Variables (private)
 
-
+	private float m_fDistanceEntreMoiEtCible = 0.0f;
 
 	#endregion
 
@@ -49,13 +49,7 @@ public class Ennemi : Personnage
 
 	protected override void MoveCharacter()
 	{
-		Vector3 tDestination = m_pCible.transform.position;
-
-		RaycastHit tHit;
-
-		if (Physics.Raycast(transform.position + Vector3.up, (tDestination - transform.position).normalized, out tHit, 300.0f, LayerMask.GetMask("Personnage"), QueryTriggerInteraction.Collide))
-			m_pNavMeshAgent.SetDestination(tHit.point - Vector3.up);
-
+		
 	}
 
 	private void AnimeMarche()
